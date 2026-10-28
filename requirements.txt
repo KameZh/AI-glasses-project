@@ -1,0 +1,38 @@
+# ── Core Django ──────────────────────────────────────────────────────────────
+Django>=5.2,<6.0
+
+# ── MongoDB backend (official, replaces djongo) ───────────────────────────────
+django-mongodb-backend>=0.1.0       # Official MongoDB backend for Django ORM
+pymongo>=4.0,<5.0                   # Low-level MongoDB driver
+
+# ── REST API ─────────────────────────────────────────────────────────────────
+djangorestframework>=3.15,<4.0      # DRF – REST API layer
+djangorestframework-simplejwt>=5.3  # JWT authentication for the mobile app
+
+# ── Real-time communication (WebSockets for live notifications) ───────────────
+channels>=4.0                       # Django Channels (WebSocket support)
+channels-redis>=4.0                 # Redis channel layer for Channels
+
+# ── Async task queue ──────────────────────────────────────────────────────────
+celery>=5.3                         # Background jobs (notifications, AI tasks)
+redis>=5.0                          # Celery broker / Channels layer
+
+# ── CORS (Flutter app on a different host/port) ───────────────────────────────
+django-cors-headers>=4.3            # Allow cross-origin requests from the app
+
+# ── Media & file handling ─────────────────────────────────────────────────────
+Pillow>=10.0                        # Image processing
+
+# ── Environment & config ──────────────────────────────────────────────────────
+python-decouple>=3.8                # 12-factor .env config
+gunicorn>=21.0                      # Production WSGI server
+
+# ── AI / ML integrations ──────────────────────────────────────────────────────
+openai>=1.0                         # OpenAI API (AI assistant feature)
+google-generativeai>=0.5            # Gemini API (on-device AI alternative)
+SpeechRecognition>=3.10             # Voice-to-text for glasses mic input
+gTTS>=2.5                           # Text-to-speech (glasses speaker output)
+
+# ── Dev / testing ─────────────────────────────────────────────────────────────
+pytest-django>=4.8                  # Django-specific pytest helpers
+factory-boy>=3.3                    # Test fixtures
